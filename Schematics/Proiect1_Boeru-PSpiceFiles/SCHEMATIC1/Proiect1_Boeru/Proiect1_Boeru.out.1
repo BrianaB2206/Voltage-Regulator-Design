@@ -1,0 +1,69 @@
+
+**** 04/10/22 22:32:52 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Proiect1_Boeru"  [ E:\Proiect1_Boeru-PSpiceFiles\SCHEMATIC1\Proiect1_Boeru.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Proiect1_Boeru.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/brian/Desktop/Lib_ModelePSpice_Anexa_1/Modele_A1_lib/MJD32CG.lib" 
+.LIB "C:/Users/brian/Desktop/Lib_ModelePSpice_Anexa_1/Modele_A1_lib/BC856B.lib" 
+.LIB "C:/Users/brian/Desktop/Lib_ModelePSpice_Anexa_1/Modele_A1_lib/BC846B.lib" 
+.LIB "C:/Users/brian/Desktop/Lib_ModelePSpice_Anexa_1/Modele_A1_lib/BZX84C5V1.lib" 
+.LIB "C:/Users/brian/Desktop/Lib_ModelePSpice_Anexa_1/Modele_A1_lib/BZX84C6V8.lib" 
+* From [PSPICE NETLIST] section of C:\Users\brian\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_V1 9 20 0.01 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECT1_BOERU
+R_RSC         N177457 N177943  10 TC=0,0 
+Q_Q4         N177619 N177619 N180228 QBC846B 
+Q_Q2         N177619 N178077 N177571 QBC856B 
+C_C3         0 N177457  10u  TC=0,0 
+R_R1         N1781611 N178191  2.2k TC=0,0 
+Q_Q3         N177555 N178515 N177571 QBC856B 
+R_R4         N180228 N177877  100 TC=0,0 
+R_RLoad         0 N177457  220 TC=0,0 
+V_V1         0 N177877 6Vdc
+R_R7         0 N178521  680 TC=0,0 
+R_R5         N178389 N177877  100 TC=0,0 
+Q_Q7         N177877 N177555 N177943 QMJD32CT4G 
+X_R9         N178355 N178515 N178521 POT PARAMS: SET=1 VALUE=2k
+R_R8         N178355 N177457  220 TC=0,0 
+R_R6         0 N177571  100 TC=0,0 
+Q_Q5         N177555 N177619 N178389 QBC846B 
+C_C2         0 N178191  4.7u  TC=0,0 
+Q_Q6         N177555 N177943 N177457 QBC856B 
+C_C1         0 N177877  10u  TC=0,0 
+Q_Q1         N177877 N177911 N178191 QBC856B 
+R_R3         0 N178077  1k TC=0,0 
+R_Rb         N177911 N177877  180k TC=0,0 
+R_R2         N178077 N1781611  2.2k TC=0,0 
+D_D1         N178191 0 BZX84-C2V7 
+
+**** RESUMING Proiect1_Boeru.cir ****
+.END
+
+
+ERROR(ORPSIM-15113): Model BZX84-C2V7 used by D_D1 is undefined
+

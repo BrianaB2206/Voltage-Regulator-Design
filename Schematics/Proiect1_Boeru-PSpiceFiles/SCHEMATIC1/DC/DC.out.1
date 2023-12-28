@@ -1,0 +1,79 @@
+
+**** 05/14/22 19:38:59 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ c:\users\brian\desktop\proiect1_simulation_files_boeru\schematics\proiect1_boeru-pspicefiles\schemati
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "DC.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/brian/Desktop/Lib_ModelePSpice_Anexa_1/Modele_A1_lib/THT/BC546.lib" 
+.LIB "C:/Users/brian/Desktop/Lib_ModelePSpice_Anexa_1/Modele_A1_lib/THT/TIP32C.LIB" 
+.LIB "C:/Users/brian/Desktop/Lib_ModelePSpice_Anexa_1/Modele_A1_lib/BZX84C2V7.lib" 
+.LIB "C:/Users/brian/Desktop/Lib_ModelePSpice_Anexa_1/Modele_A1_lib/MJD32CG.lib" 
+.LIB "C:/Users/brian/Desktop/Lib_ModelePSpice_Anexa_1/Modele_A1_lib/BC856B.lib" 
+.LIB "C:/Users/brian/Desktop/Lib_ModelePSpice_Anexa_1/Modele_A1_lib/BC846B.lib" 
+.LIB "C:/Users/brian/Desktop/Lib_ModelePSpice_Anexa_1/Modele_A1_lib/BZX84C5V1.lib" 
+.LIB "C:/Users/brian/Desktop/Lib_ModelePSpice_Anexa_1/Modele_A1_lib/BZX84C6V8.lib" 
+* From [PSPICE NETLIST] section of C:\Users\brian\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_V1 9 20 0.01 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECT1_BOERU
+R_RSC1         N189299 N177943  10 TC=0,0 
+C_C3         0 N177457  10u  TC=0,0 
+R_R1         N1781611 N178191  2.2k TC=0,0 
+R_R4         N180228 N177877  100 TC=0,0 
+R_RLoad         0 N189917  100 TC=0,0 
+V_V1         0 N177877 6Vdc
+R_R7         0 N178521  680 TC=0,0 
+R_R5         N178389 N177877  100 TC=0,0 
+X_R9         N178355 N178515 N178521 POT PARAMS: SET=0 VALUE=2k
+R_R8         N178355 N177457  330 TC=0,0 
+R_R6         0 N177571  100 TC=0,0 
+C_C2         0 N178191  4.7u  TC=0,0 
+C_C1         0 N177877  10u  TC=0,0 
+R_R3         0 N178077  1k TC=0,0 
+R_Rb         N177911 N177877  22k TC=0,0 
+R_R2         N178077 N1781611  2.2k TC=0,0 
+D_D1         N178191 0 BZX84-C5V1 
+R_RSC2         N189303 N189299  10 TC=0,0 
+R_RSC3         N189316 N189303  10 TC=0,0 
+R_RSC4         N177457 N189316  4.7 TC=0,0 
+R_RLoad1         N189917 N177457  100 TC=0,0 
+Q_Q14         N177877 N177555 N177943 QTIP32C 
+Q_Q15         N177619 N177619 N180228 BC546B 
+Q_Q16         N177555 N177619 N178389 BC546B 
+
+**** RESUMING DC.cir ****
+.END
+
+INFO(ORPSIM-15423): Unable to find index file BC546.ind for library file BC546.lib.
+
+INFO(ORPSIM-15422): Making new index file BC546.ind for library file BC546.lib.
+
+Index has 1 entries from 1 file(s).
+
+ERROR(ORPSIM-15141): Less than 2 connections at node N177571.
+
+ERROR(ORPSIM-15141): Less than 2 connections at node N177911.
+
